@@ -43,7 +43,7 @@ header{
     z-index: 5;
     position: sticky;
     top: 0;
-    height: 9vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -112,11 +112,9 @@ nav ul li a:hover{
 }
 
 .hero_img{
+    animation: pulse 10s infinite;
     width: 50vw;
-}
-
-.hero_img{
-    animation: pulse 5s infinite;
+    filter: grayscale(.8);
 }
 
 
