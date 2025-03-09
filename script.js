@@ -67,9 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   images.forEach(img => {
       img.addEventListener('click', function() {
-        if (img.src.includes('gardenCMD')) {
-          window.location.href = '/projects/gardencmd';
-      } 
+        window.location.href = '/projects/gardencmd';
+       
     } 
   );
 });
