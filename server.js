@@ -58,7 +58,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 5500;
+const port = 5501;
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
