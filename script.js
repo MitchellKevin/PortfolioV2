@@ -67,10 +67,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
   images.forEach(img => {
       img.addEventListener('click', function() {
+        window.location.href = '/projects/cocktail';
+       
+    } 
+  );
+});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.clickable-img2');
+
+  images.forEach(img => {
+      img.addEventListener('click', function() {
         window.location.href = '/projects/gardencmd';
        
     } 
   );
 });
-}
-);
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.clickable-img3');
+
+  images.forEach(img => {
+      img.addEventListener('click', function() {
+        window.location.href = '/projects/nao';
+       
+    } 
+  );
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.clickable-img4');
+
+  images.forEach(img => {
+      img.addEventListener('click', function() {
+        window.location.href = '/projects/mclaren';
+       
+    } 
+  );
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.clickable-img5');
+
+  images.forEach(img => {
+      img.addEventListener('click', function() {
+        window.location.href = '/projects/mario';
+       
+    } 
+  );
+});
+});
