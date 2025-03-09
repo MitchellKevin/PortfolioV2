@@ -236,3 +236,7 @@ form button{
     opacity: 1;
     transform: translateY(0);
 }
+
+.favicon{
+    border-radius: 50%;
+}
