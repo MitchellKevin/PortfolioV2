@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   images.forEach(img => {
       img.addEventListener('click', function() {
-          window.location.href = '/project/gardencmd';
+          window.location.href = '/projects/gardencmd';
       });
   });
 });
