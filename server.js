@@ -62,7 +62,7 @@ const port = 5501;
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', 'views');
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
