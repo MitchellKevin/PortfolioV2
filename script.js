@@ -41,3 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', onScroll);
     onScroll();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.clickable-img1');
+
+  images.forEach(img => {
+      img.addEventListener('click', function() {
+          window.location.href = '/project/gardencmd';
+      });
+  });
+});
