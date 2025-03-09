@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
 // Route for project pages
 app.get('/project/:projectName', (req, res) => {
   const projectName = req.params.projectName;
-  res.sendFile(path.join(__dirname, 'projects', `${projectName}.ejs`));
+  res.sendFile(path.join(__dirname, 'projects', `${projectName}.html`));
 });
 
 // Start the server
