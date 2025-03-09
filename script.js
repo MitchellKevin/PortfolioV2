@@ -9,3 +9,35 @@ window.addEventListener("scroll", () => {
     console.log(progress);
   });
   
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY;
+    let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    let progress = (scrollTop / documentHeight) * 100; // Calculate percentage
+  
+    document.querySelector(".progress_bar").style.height = progress + "%"; // Update height
+    console.log(progress);
+});
+  
+document.addEventListener('DOMContentLoaded', function() {
+    const workSection = document.getElementById('Work');
+    const images = workSection.querySelectorAll('.work-slide img');
+
+    function onScroll() {
+        const sectionTop = workSection.getBoundingClientRect().top;
+        const sectionBottom = workSection.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight && sectionBottom > 0) {
+            images.forEach(img => {
+                img.classList.add('visible');
+            });
+        } else {
+            images.forEach(img => {
+                img.classList.remove('visible');
+            });
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+});

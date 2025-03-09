@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="server.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -46,12 +47,16 @@
                 <img src="img/new_mockup/mario.png">
             </div>
           </section>
-        <!-- <section id="skills">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </section> -->
+          <section>
+            <form id="contact-form" action="pannekoek" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+          </section>
     </main>
     <footer></footer>
 </body>
