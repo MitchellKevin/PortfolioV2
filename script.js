@@ -43,11 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('.clickable-img1');
+  const images = document.querySelectorAll('.clickable-img');
 
   images.forEach(img => {
       img.addEventListener('click', function() {
+        if (img.src.includes('gardenCMD')) {
           window.location.href = '/projects/gardencmd';
-      });
+      } else if (img.src.includes('cocktail')) {
+          window.location.href = '/projects/cocktail';
+      } else if (img.src.includes('mario')) {
+        window.location.href = '/projects/mario';
+      } else if (img.src.includes('mclaren')) {
+        window.location.href = '/projects/mclaren';
+      } else if (img.src.includes('nao')) {
+        window.location.href = '/projects/nao';
+    } 
   });
+});
 });
