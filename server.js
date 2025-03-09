@@ -33,8 +33,44 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 5500;
+const dotenv = require('dotenv');
+dotenv.config();
+const mongodb = require('mongodb');
+const { MongoClient } = require('mongodb');
+const uri = process.env.MONGODB_URI;
+const db_name = process.env.DB_NAME;
+const client= new MongoClient(uri);
 
+async function connect() {
+  try {
+      await client.connect();
+      console.log('Connected to the database');
+  } catch (error) {
+      console.log(error);
+  }
+}
 
+app.post('/contact_verzoek', async (req, res) => {
+  try {
+      const database = client.db(process.env.NAME_DB);
+      const usersCollection = database.collection('contacts');
+      
+      const newContact = {
+          company: req.body.company,
+          name: req.body.name,
+          email: req.body.email,
+          message : req.body.message
+      };
+      await usersCollection.deleteMany({});
+      await usersCollection.insertOne(newUser);
+      console.log('New user inserted:', newUser);
+      getData(req, res);
+      res.render('index.html');
+  } catch (error) {
+      console.error('Error inserting new user:', error);
+      res.status(500).send('Error inserting new user');
+  }
+});
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,6 +90,8 @@ app.get('/project/:projectName', (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running at http://185.199.108.153:${port}`);
 });
+
+
 
 // const express = require('express');
 // const path = require('path');
