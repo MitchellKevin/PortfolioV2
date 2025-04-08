@@ -5,103 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>Garden CMD Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        header img {
-            width: 40px;
-            cursor: pointer;
-        }
-
-        h1 {
-            margin: 20px 0;
-            font-size: 5em;
-            text-transform: uppercase;
-            color: #a9ffdb;
-        }
-
-
-        p{
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px; /* Ruimte tussen afbeelding en tekst */
-            margin: 40px auto;
-            max-width: 80%;
-        }
-
-        .project-image {
-            flex: 1;
-            max-width: 50%; /* Beperk de breedte van de afbeelding */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .text-content {
-            flex: 1;
-            text-align: left; /* Tekst links uitlijnen */
-            margin-left: 1em;
-        }
-
-        .description {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #00ff00;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border: 2px solid #00ff00;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .link:hover {
-            background-color: #00ff00;
-            color: black;
-            text-decoration: none;
-        }
-
-        /* Responsiviteit voor kleinere schermen */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column; /* Stapel afbeelding en tekst onder elkaar */
-                text-align: center;
-            }
-
-            .project-image {
-                max-width: 100%; /* Laat de afbeelding de volledige breedte gebruiken */
-            }
-
-            .text-content {
-                text-align: center; /* Tekst centreren op kleinere schermen */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/detail.css">
 </head>
 <body>
     <header>
@@ -110,13 +14,13 @@
     <main>
         <h1>Mclaren</h1>
         <div class="content">
-            <img class="project-image" src="/img/new_mockup/gardenCMD.png" alt="Garden CMD Project">
+            <img class="project-image" src="/img/new_mockup/mclaren.png" alt="Garden CMD Project">
             <div class="text-content">
                 <p class="description">
                     Tijdens dit project moesten we een website namaken ik ging voor de website van mclaren, hierbij heb ik vooral dom manupilatie geleerd om verschillende kleuren weer tegeven zonder van url te veranderen.
                 </p>
-                <a class="link" href="https://github.com/MitchellKevin/FED">GitHub</a>
                 <a class="link" href="https://mitchellkevin.github.io/FED/">Site</a>
+                <a class="link" href="https://github.com/MitchellKevin/FED">GitHub</a>
             </div>
         </div>
     </main>
