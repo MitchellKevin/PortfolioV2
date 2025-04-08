@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
   res.render('index'); // Zorg ervoor dat je een `index.ejs` hebt
 });
 
+
 // Socket.IO logica
 io.on('connection', (socket) => {
   console.log('A user connected');
