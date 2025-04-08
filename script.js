@@ -1,5 +1,3 @@
-
-
 window.addEventListener("scroll", () => {
     let scrollTop = window.scrollY;
     let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -41,26 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', onScroll);
     onScroll();
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   const images = document.querySelectorAll('.clickable-img');
-
-//   images.forEach(img => {
-//       img.addEventListener('click', function() {
-//         if (img.src.includes('gardenCMD')) {
-//           window.location.href = '/projects/gardencmd';
-//       } else if (img.src.includes('cocktail')) {
-//           window.location.href = '/projects/cocktail';
-//       } else if (img.src.includes('mario')) {
-//         window.location.href = '/projects/mario';
-//       } else if (img.src.includes('mclaren')) {
-//         window.location.href = '/projects/mclaren';
-//       } else if (img.src.includes('nao')) {
-//         window.location.href = '/projects/nao';
-//     } 
-//   });
-// });
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.clickable-img1');
@@ -117,4 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
   );
 });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
 });
